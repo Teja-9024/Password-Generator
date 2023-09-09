@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { HiClipboardCopy } from "react-icons/hi";
+import { FaCopy } from "react-icons/fa";
 import { useState } from 'react';
 import { ToastContainer, collapseToast, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -44,10 +44,11 @@ function App() {
         if(insym){
           alldata=alldata+Symbols;
         }
-        passcheck(alldata)
+        passcheck(alldata);
+        toast.success('success')
 
       }
-      toast.success('success')
+     
 
       
   }
@@ -69,7 +70,6 @@ let passcheck=(alldata)=>{
 
 function copytext(){
     copy(finalpass);
-
     toast('Text Copied ');
     
 }
@@ -83,8 +83,10 @@ function copytext(){
           <div className='max-w-[400px] mx-auto shadow-lg bg-white px-[40px] py-[40px] rounded'>
               <h3 className='text-[25px] text-center font-bold'>Password Generator</h3>
               <div className='relative'>
+
                 <input type="text" value={finalpass}  className='w-[100%] h-[45px] border-2 border-yellow-800 my-[10px] '/>
-                <HiClipboardCopy onClick={copytext} className='absolute right-[0px] top-4 text-[30px] cursor-pointer'/>
+
+                <FaCopy onClick={copytext} className='absolute right-[5px] top-4 text-[30px] cursor-pointer'/>
               </div>
               <div className='flex justify-between my-[10px]'>
                  <h5 className='font-bold'>Password Length</h5>
