@@ -77,8 +77,8 @@ function copytext(){
 
   return (
   
-    <div className=" bg-[rgba(0,0,0,0.7)] py-[150px]">
-    <ToastContainer position='top-center'/>
+    <div className=" bg-[rgba(0,0,0,0.7)] py-[150px] relative">
+    <ToastContainer position='top-center '/>
 
           <div className='max-w-[400px] mx-auto shadow-lg bg-white px-[40px] py-[40px] rounded'>
               <h3 className='text-[25px] text-center font-bold'>Password Generator</h3>
@@ -113,6 +113,9 @@ function copytext(){
                 
               </div>
             
+          </div>
+          <div className='max-w-[500px] bg-[#e8ddd5] py-[15px] text-center absolute right-0 bottom-0 px-[20px] text-[18px]'>
+            Design and Developed by Teja Ram Choudhary
           </div>
     </div>
   );
